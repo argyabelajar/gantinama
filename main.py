@@ -20,10 +20,13 @@ column_for_name = int(input("Kolom yang berisi nama (dalam bilangan bulat; conto
 #Waktu penulisan program, semua cell nama ada di kolom B, jadi agar lebih efisien iterasinya ada di kolom tertentu
 ##Kalau namanya ada di beberapa kolom, coba jalankan beberapa kali
 border = input("Jenis border (thin, bold, dsb)(kalau gak ada tulis: none): ").lower()
+
 #Kalau ada border, tulis jenis bordernya
-input_path = input("Nama input (contoh: goo.xlsx) (jangan lupa tambah .xlxs): ")
+print(f"{Colors.RED}PERINGATAN:{Colors.ENDC} Nama file itu case-sensitive! Jadi kapitalnya harus sama!")
+
+input_path = input("Nama input (contoh: goo.xlsx) (jangan lupa tambah .xlsx): ")
 #Nama file yang mau diubah
-output_path = input("Nama output (contoh: foo.xlsx) (jangan lupa tambah .xlxs): ")
+output_path = input("Nama output (contoh: foo.xlsx) (jangan lupa tambah .xlsx): ")
 #Nama file hasil
 name_path = input("Nama file nama (jangan lupa .txt): ")
 
