@@ -20,8 +20,8 @@ column_for_name = int(input("Kolom yang berisi nama (dalam bilangan bulat; conto
 #Waktu penulisan program, semua cell nama ada di kolom B, jadi agar lebih efisien iterasinya ada di kolom tertentu
 ##Kalau namanya ada di beberapa kolom, coba jalankan beberapa kali
 border = input("Jenis border (thin, bold, dsb)(kalau gak ada tulis: none): ").lower()
-
 #Kalau ada border, tulis jenis bordernya
+
 print(f"{Colors.RED}PERINGATAN:{Colors.ENDC} Nama file itu case-sensitive! Jadi kapitalnya harus sama!")
 
 input_path = input("Nama input (contoh: goo.xlsx) (jangan lupa tambah .xlsx): ")
@@ -29,6 +29,7 @@ input_path = input("Nama input (contoh: goo.xlsx) (jangan lupa tambah .xlsx): ")
 output_path = input("Nama output (contoh: foo.xlsx) (jangan lupa tambah .xlsx): ")
 #Nama file hasil
 name_path = input("Nama file nama (jangan lupa .txt): ")
+name_label = input("Nama judul kolom (header) buat nentuin nama (biasanya 'nama', kalau engga tau masukin aja: nama)").lower()
 
 wb = load_workbook(input_path)
 
@@ -117,7 +118,7 @@ for i in tempname:
 for ws in wb.worksheets:
     for row in range(1, ws.max_row + 1):
         cell = ws.cell(row=row, column=column_for_name)
-        if isinstance(cell.value, str) and cell.value.strip().lower() == "nama":
+        if isinstance(cell.value, str) and cell.value.strip().lower() == name_label:
             r = row + 1
 
             while True:
