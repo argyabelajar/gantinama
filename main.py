@@ -28,8 +28,8 @@ input_path = input("Nama input (contoh: goo.xlsx) (jangan lupa tambah .xlsx): ")
 #Nama file yang mau diubah
 output_path = input("Nama output (contoh: foo.xlsx) (jangan lupa tambah .xlsx): ")
 #Nama file hasil
-name_path = input("Nama file nama (jangan lupa .txt): ")
-name_label = input("Nama judul kolom (header) buat nentuin nama (biasanya 'nama', kalau engga tau masukin aja: nama)").lower()
+name_path = input("Nama file nama baru (jangan lupa .txt): ")
+name_label = input("Nama judul kolom (header) buat nentuin nama (biasanya 'nama', kalau engga tau masukin aja: nama): ").lower()
 
 wb = load_workbook(input_path)
 
