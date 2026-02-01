@@ -25,6 +25,7 @@ input_path = input("Nama input (contoh: goo.xlsx) (jangan lupa tambah .xlxs): ")
 #Nama file yang mau diubah
 output_path = input("Nama output (contoh: foo.xlsx) (jangan lupa tambah .xlxs): ")
 #Nama file hasil
+name_path = input("Nama file nama (jangan lupa .txt): ")
 
 wb = load_workbook(input_path)
 
@@ -89,7 +90,7 @@ def delete_rows_with_cleanup(ws, idx, amount=1):
 
 
 tempname: list[str] = []
-with open("Nama baru.txt", "r", encoding="utf-8") as f:
+with open(name_path, "r", encoding="utf-8") as f:
     for line in f:
         line = line.strip()
         if not line:
