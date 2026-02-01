@@ -16,14 +16,14 @@ from copier import copy_from_another_row, get_style_row_range, is_cell_styled
 from openpyxl.worksheet.cell_range import CellRange
 from Color import Colors
 
-column_for_name = int(input("Kolom yang berisi nama: (dalam bilangan bulat; contoh: kalau kolom A tulis: 1, kalau B tulis: 2, dsb)"))
+column_for_name = int(input("Kolom yang berisi nama (dalam bilangan bulat; contoh: kalau kolom A tulis: 1, kalau B tulis: 2, dsb): "))
 #Waktu penulisan program, semua cell nama ada di kolom B, jadi agar lebih efisien iterasinya ada di kolom tertentu
 ##Kalau namanya ada di beberapa kolom, coba jalankan beberapa kali
 border = input("Jenis border (thin, bold, dsb)(kalau gak ada tulis: none): ").lower()
 #Kalau ada border, tulis jenis bordernya
 input_path = input("Nama input (contoh: goo.xlsx) (jangan lupa tambah .xlxs): ")
 #Nama file yang mau diubah
-output_path = input("Nama output (contoh: foo.xlsx) (jangan lupa tambah .xlxs):")
+output_path = input("Nama output (contoh: foo.xlsx) (jangan lupa tambah .xlxs): ")
 #Nama file hasil
 
 wb = load_workbook(input_path)
